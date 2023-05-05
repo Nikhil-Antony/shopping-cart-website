@@ -35,4 +35,10 @@ def index(request):
     return render(request, "web/index.html", context=context)
 
 
-
+def product(request, id):
+    instances = get_object_or_404(Product.objects.filter(id=id))
+    context = {
+        "instances": instances,
+        "title": "Product"
+    }
+    return render(request, "web/products.html", context=context)
