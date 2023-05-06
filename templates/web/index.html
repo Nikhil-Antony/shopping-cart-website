@@ -17,6 +17,7 @@
                                 <div class="card-body">
                                   <h6 class="card-title">{{product.brand}}</h6>
                                   <h5 class="card-title fw-bold">{{product.title}}</h5>
+                                  <h5 class="card-title fw-bold">${{product.price}}</h5>
                                   <p class="card-text">{{product.description}}</p>
                                   {% for tag in product.categories.all %}
                                   <a href="#" class="btn btn-secondary">{{tag.title}} </a>

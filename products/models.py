@@ -26,6 +26,7 @@ class Product(models.Model):
     description = models.TextField()
     categories = models.ManyToManyField("products.Category")
     image = models.ImageField(upload_to="products/")
+    price = models.DecimalField(max_digits=8, decimal_places=2)
 
     brand = models.ForeignKey("products.Brand", on_delete=models.CASCADE)
     is_deleted = models.BooleanField(default=False)
