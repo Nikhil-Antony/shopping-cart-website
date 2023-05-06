@@ -1,6 +1,7 @@
 {% extends 'users/auth_base.html' %} {% load static %}{% block content %}
 <section class="form">
   <h1>Login page</h1>
+  <div>{{messages}}</div>
   <form action="" method="post">
     {% csrf_token %}
     <div class="formrow">
